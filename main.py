@@ -8,6 +8,15 @@ def line_to_list(line: str):
     return result_list
 
 
+def find_total():
+    total = 0
+    with open("input", "r") as file:
+        for line in file:
+            num_list = line_to_list(line)
+            number = num_list[0] * 10 + num_list[-1]
+            total += number
+    return total
+
 
 if __name__ == "__main__":
     print(line_to_list("1abc2"))
