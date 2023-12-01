@@ -29,3 +29,4 @@ def find_total():
 
 if __name__ == "__main__":
    print(line_to_list("ggdone3nbmsthreefourninefiveoneightpr"))
+   print(find_total())
