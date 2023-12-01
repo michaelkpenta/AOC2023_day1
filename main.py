@@ -4,6 +4,15 @@ def line_to_list(line: str):
     while index < len(line):
         if line[index].isnumeric():
             result_list.append(int(line[index]))
+
+        else: #it is a character - could be a number word
+            word_to_num = {
+              "one": 1, "two": 2, "three": 3,
+              "four": 4, "five": 5, "six": 6,
+              "seven": 7, "eight": 8, "nine": 9}
+            for word in word_to_num:
+                if line[index:].startswith(word):
+                    result_list.append(int(word_to_num[word]))
         index += 1
     return result_list
 
@@ -19,4 +28,4 @@ def find_total():
 
 
 if __name__ == "__main__":
-    print(find_total())
+   print(line_to_list("ggdone3nbmsthreefourninefiveoneightpr"))
